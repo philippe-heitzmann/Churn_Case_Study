@@ -1,4 +1,4 @@
-## Please refer to the .pdf file for the complete slide deck presented to senior management for this 2nd round interview customer churn case study. 
+## Please refer to the .pdf file for the complete slide deck presented to senior management for this 2nd round interview customer churn case study
 
 ### Churn Case Study Overview
 
