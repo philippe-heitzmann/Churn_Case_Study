@@ -1,3 +1,5 @@
+## Please refer to the .pdf file for the complete slide deck presented to senior management for this 2nd round interview customer churn case study. 
+
 ### Churn Case Study Overview
 
 We tackle a case study on predicting churn at the single customer level for a Wealth Management business in order to produce an analytically-based strategy on how to deal with customer churn. Please refer to the Jupyter notebook for the Python code that went into this analysis. All other files in this repo provide code to launch a simple Dash and Flask app to create a dashboard that visualizes our results and provides real-time machine learning predictions and rankings of customers by expected value of prescribing promotional activity to stem predicted customer churn. 
