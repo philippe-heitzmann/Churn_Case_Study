@@ -2,7 +2,7 @@
 
 ### Churn Case Study Overview
 
-We tackle a case study on predicting churn at the single customer level for a Wealth Management business in order to produce an analytically-based strategy on how to deal with customer churn. This analysis was completed as part of a second round interview presentation given to senior management of this business within one week of receiving these case study materials. Please refer to the Jupyter notebook for the Python code that went into this analysis. All other files in this repo provide code to launch a simple Dash and Flask app to create a dashboard that visualizes our results and provides real-time machine learning predictions and rankings of customers by expected value of prescribing promotional activity to stem predicted customer churn. 
+We tackle a case study on predicting churn at the single customer level for a Wealth Management business in order to produce an analytically-based strategy on how to deal with customer churn. This analysis was completed as part of a second round interview presentation given to senior management of this business within one week of receiving these case study materials for a prospective employment opportunity. Please refer to the Jupyter notebook for the Python code that went into this analysis. All other files in this repo provide code to launch a simple Dash and Flask app to create a dashboard that visualizes our results and provides real-time machine learning predictions and rankings of customers by expected value of prescribing promotional activity to stem predicted customer churn. 
 
 ### Analysis Summary
 
