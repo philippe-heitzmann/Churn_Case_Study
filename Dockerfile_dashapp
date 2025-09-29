@@ -1,0 +1,33 @@
+# ---- Dash Churn App Dockerfile ----
+# Tip: If you hit build issues with old wheels (e.g., numpy 1.18.5),
+# change the base image to python:3.8-slim for maximum compatibility.
+ARG PYTHON_IMAGE=python:3.9-slim
+FROM ${PYTHON_IMAGE}
+
+# Prevent Python from writing pyc files / and ensure logs flush
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+# Set workdir
+WORKDIR /app
+
+# System deps (kept minimal). Uncomment build tools if you need to compile wheels.
+# RUN apt-get update && apt-get install -y --no-install-recommends build-essential && \
+#     rm -rf /var/lib/apt/lists/*
+
+# Copy requirements and install (use --no-cache-dir to keep image small)
+COPY requirements.txt /app/requirements.txt
+RUN pip install --no-cache-dir -r /app/requirements.txt
+
+# Copy the rest of the project
+# (expects app.py at repo root; adjust if your entry is in a subfolder)
+COPY . /app
+
+# Dash defaults to port 8050
+EXPOSE 5000
+
+# If your Dash app uses app.run_server(), make sure it binds to 0.0.0.0 in code:
+# app.run_server(host="0.0.0.0", port=8050, debug=False)
+#
+# Start the app
+CMD ["python", "./src/app.py"]
