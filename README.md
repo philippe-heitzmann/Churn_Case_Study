@@ -55,12 +55,12 @@ Prerequisites: Docker installed
 #### Build the image
 From the project root (where Dockerfile and requirements.txt live)
 ```
-docker build -t churn-dash-app .
+docker build -t Dockerfile_dashapp .
 ```
 
 #### Run the container
 
-docker run --rm -p 5000:5000 churn-dash-app
+docker run --rm -p 5000:5000 Dockerfile_dashapp
 
 #### Open the app
 
