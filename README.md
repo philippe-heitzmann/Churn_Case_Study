@@ -25,10 +25,9 @@ Data quality checks uncovered impossible outliers such as an **Age of 190** and 
 #### Feature Engineering
 To enrich demographic signals, we joined client surnames with **2010 U.S. Census surname data** to infer ethnicity distributions. This process created new features such as ethnicity percentages and a "Relative" indicator to capture potential family relationships among clients with uncommon surnames. Although statistical tests suggested the “Relative” feature was weakly predictive, it showcased how external data can expand model scope. Ultimately, engineered variables improved interpretability and gave business teams deeper demographic insights.
 
-<p float="left">
-  <img src="./images/feature_engineering1_churn.png" width="48%" />
-  <img src="./images/feature_engineering2_churn.png" width="48%" />
-</p>
+![Feature Engineering 1](./images/feature_engineering1_churn.png)
+
+![Feature Engineering 2](./images/feature_engineering2_churn.png)
 
 #### Model Training
 We trained **Logistic Regression, Random Forest, and XGBoost** models, with **recall** chosen as the primary metric due to the higher cost of missing a true churner. After adjusting for class imbalance, **XGBoost outperformed with ROC-AUC = 0.87, Recall = 0.77, and low variance across folds**, making it the final model of choice. Importantly, it reduced false negatives compared to baseline models, directly aligning with the business objective. The model’s predicted churn probabilities became inputs for the decision framework guiding retention investments.
@@ -38,10 +37,9 @@ We trained **Logistic Regression, Random Forest, and XGBoost** models, with **re
 #### Recommendations
 Based on feature importance, we advised targeting customers who were **over 40, female, active digital users, multi-product holders, and with balances above $75k**. These segments were consistently linked to higher attrition risks, despite representing profitable client groups. Additionally, the **East Division** emerged as a critical factor: leadership should investigate regional operations or competitive threats. Overall, the recommended promotional strategy narrowed interventions to **~1,500 high-risk customers**, down from 2,500 predicted churners, optimizing retention resources.
 
-<p float="left">
-  <img src="./images/recommendation1_churn.png" width="48%" />
-  <img src="./images/recommendation2_churn.png" width="48%" />
-</p>
+![Recommendation 1](./images/recommendation1_churn.png)
+
+![Recommendation 2](./images/recommendation2_churn.png)
 
 ## Dashboard
 We built an interactive dashboard using **Dash and Flask** to operationalize the results. Advisors can search customers by ID, view real-time churn predictions, and see confidence scores directly from serialized ML models. The interface highlights key customer attributes (**Age, Balance, Products, Activity, Gender**) alongside their predicted churn probability and expected value ranking. This tool not only scales churn prevention strategies but also empowers advisors with actionable, customer-level intelligence for retention outreach.
