@@ -1,4 +1,4 @@
-# Predicting Churn with ML
+# Predicting Churn with Machine Learning
 
 ## Overview
 This case study tackles the problem of predicting customer churn for a U.S. Wealth Management business with over 10,000 clients. The goal was to identify which customers were most likely to leave and build a data-driven strategy to reduce attrition. Using Python, we applied the end-to-end data science process: from data exploration and cleaning to feature engineering, model training, and actionable business recommendations. The final output included both predictive models and an interactive dashboard for advisors to prioritize retention efforts at the individual customer level.
